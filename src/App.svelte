@@ -2,6 +2,7 @@
   export let name;
   import { onMount } from 'svelte';
   import Header from './Header.svelte'
+  import Figure from './Figure.svelte'
   import Gallery from './Gallery.svelte'
   let galleryImages = [];
 
@@ -36,6 +37,7 @@
 </style>
 
 <Header hero={true} {name} />
+<Figure hero={true} image='http://placekitten.com/1920/768' />
 <main>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis nam totam dolore, eaque, quo veniam nihil delectus atque dicta esse, quibusdam earum ratione omnis. Distinctio voluptatum minus error reiciendis architecto!</p>
   <Gallery images={galleryImages} />

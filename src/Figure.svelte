@@ -1,6 +1,7 @@
 <script>
   export let image;
-  export let i;
+  export let i = -1;
+  export let hero = false;
   let active = false
 
   const handleClick = (event) => active = !active
@@ -8,11 +9,15 @@
 
 <style>
   figure {
-    width: 33.33%;
-    padding: 0.5rem;
+    width: 100%;
     transition: transform ease 300ms;
     background-color: white;
     cursor: pointer;
+  }
+
+  figure:not(.hero) {
+    width: 33.33%;
+    padding: 0.5rem;
   }
 
   figure.active {
@@ -21,7 +26,9 @@
   }
 </style>
 
-<figure on:click={handleClick} class:active>
+<figure on:click={handleClick} class:hero class:active>
   <img src={image} />
+  {#if i + 1 > 0}
   <figcaption>Image {i + 1}</figcaption>
+  {/if}
 </figure>
