@@ -35,7 +35,7 @@
   }
 </style>
 
-<Header hero={false} {name} />
+<Header hero={true} {name} />
 <main>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis nam totam dolore, eaque, quo veniam nihil delectus atque dicta esse, quibusdam earum ratione omnis. Distinctio voluptatum minus error reiciendis architecto!</p>
   <Gallery images={galleryImages} />
